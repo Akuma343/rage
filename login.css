@@ -8,7 +8,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically and horizontally */
+  align-items: center;
   text-align: center;
 }
 
@@ -26,8 +26,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically and horizontally */
-  height: 100%; /* Full height for centering */
+  align-items: center;
+  height: 100%;
 }
 
 .login-content {
@@ -44,8 +44,8 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid #2e2e2e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 100%; /* Ensure it doesn't exceed screen width */
-  width: 100%; /* Let the box take full width of container */
+  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -58,11 +58,9 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
   color: #fff;
-  text-align: center;
   margin-bottom: 30px;
 }
 
-/* Input and Button Styling */
 .login-form input {
   width: 100%;
   padding: 18px;
@@ -79,6 +77,35 @@ body {
 .login-form input:focus {
   outline: none;
   border-color: #ff0000;
+}
+
+/* Password Toggle */
+.password-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.password-container input {
+  padding-right: 40px; /* Adjust spacing for icon */
+}
+
+.toggle-eye {
+  position: absolute;
+  top: 40%;
+  right: 40px; /* Slightly closer to the edge */
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.toggle-eye:hover {
+  color: #fff;
+}
+
+.toggle-eye:active {
+  color: #ff0000;
 }
 
 .btn {
@@ -102,7 +129,6 @@ body {
   margin-top: 20px;
   font-size: 14px;
   color: #ccc;
-  text-align: center;
 }
 
 .login-note a {
@@ -114,70 +140,6 @@ body {
   color: #ff4d4d;
   font-size: 14px;
   margin-top: 10px;
-  text-align: center;
-}
-
-/* Password Toggle Icon */
-.password-container {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.password-container input {
-  width: 100%;
-  padding: 12px 15px;
-  padding-right: 40px; /* space for the eye icon */
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  transition: all 0.3s ease;
-}
-
-.password-container input:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-.toggle-eye {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 20px;
-  color: #777;
-  transition: color 0.3s ease;
-}
-
-.toggle-eye:hover {
-  color: #333; /* darker shade when hovered */
-}
-
-.toggle-eye:active {
-  color: #4CAF50; /* active color when clicked */
-}
-
-/* Responsive Styles for the Toggle Eye */
-@media (max-width: 1024px) {
-  .toggle-eye {
-    font-size: 18px; /* Slightly smaller on tablets */
-    right: 10px; /* Adjust positioning */
-  }
-}
-
-@media (max-width: 768px) {
-  .toggle-eye {
-    font-size: 16px; /* Smaller on smaller devices */
-    right: 8px; /* Adjust positioning */
-  }
-}
-
-@media (max-width: 480px) {
-  .toggle-eye {
-    font-size: 14px; /* Even smaller on small screens */
-    right: 15px; /* Adjust positioning */
-    top: 25px;
-  }
 }
 
 /* Responsive Styles */
@@ -227,16 +189,22 @@ body {
   .login-note {
     font-size: 12px;
   }
+
+  /* Smaller toggle eye icon on mobile */
+  .toggle-eye {
+    font-size: 16px; /* Smaller size on smaller screens */
+    right: 30px; /* Adjust position */
+  }
 }
 
 @media (max-width: 480px) {
   body {
-    height: auto; /* Allow body to grow on small screens */
+    height: auto;
   }
 
   .login-box {
     padding: 20px;
-    margin-top: 130px; /* Move it down */
+    margin-top: 130px;
   }
 
   .login-title {
@@ -258,7 +226,13 @@ body {
   }
 
   .login-hero {
-    padding: 20px; /* Ensure some space around the login form on mobile */
-    height: auto; /* Ensure the height is auto on small screens for centering */
+    padding: 20px;
+    height: auto;
+  }
+
+  /* Even smaller toggle eye icon on very small screens */
+  .toggle-eye {
+    font-size: 14px; /* Further smaller size for very small screens */
+    right: 25px; /* Adjust position for smaller screens */
   }
 }
