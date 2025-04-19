@@ -193,7 +193,7 @@ body {
   /* Smaller toggle eye icon on mobile */
   .toggle-eye {
     font-size: 16px; /* Smaller size on smaller screens */
-    right: 30px; /* Adjust position */
+    right: 40px; /* Adjust position */
   }
 }
 
