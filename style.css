@@ -325,7 +325,7 @@ header {
 
   /* Smaller nav links on mobile */
   .nav-links li a {
-    font-size: 12px !important; /* Force the font size to be 15px */
+    font-size: 10px !important; /* Force the font size to be 15px */
     text-transform: none !important; /* Ensure no uppercase text */
   }
 
