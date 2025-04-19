@@ -108,7 +108,7 @@ header {
   text-decoration: none;
   position: absolute;
   top: 28px;
-  right: 80px;
+  right: 40px;
   font-size: 14px;
 }
 
@@ -308,7 +308,7 @@ header {
   .logout-btn {
     position: absolute;
     top: 20px;
-    right: 20px; /* Move the button to the right on mobile */
+    right: 30px; /* Move the button to the right on mobile */
     font-size: 5px;
     padding: 6px 12px;
   }
