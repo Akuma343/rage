@@ -109,7 +109,7 @@ header {
   position: absolute;
   top: 28px;
   right: 40px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .logout-btn:hover {
@@ -361,10 +361,9 @@ header {
   }
 }
 
-/* Footer Media Query */
-@media (max-width: 768px) {
-  footer {
-    padding: 20px 0;
-    font-size: 14px;
-  }
+/* Footer */
+footer {
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center; /* Centers the text */
 }
