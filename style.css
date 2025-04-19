@@ -290,7 +290,7 @@ header {
     align-items: center;
     justify-content: center; /* Center the links */
     width: 100%;
-    margin-top: 10px;
+    margin-top: -8px;
     padding: 0;
   }
 
@@ -300,16 +300,16 @@ header {
 
   /* Smaller nav links on mobile */
   .nav-links li a {
-    font-size: 14px;
+    font-size: 15px;
     text-transform: none; /* Remove uppercase text */
   }
 
   /* Adjust logout button on mobile */
   .logout-btn {
     position: absolute;
-    top: 28px;
+    top: 20px;
     right: 20px; /* Move the button to the right on mobile */
-    font-size: 8px;
+    font-size: 5px;
     padding: 6px 12px;
   }
 
