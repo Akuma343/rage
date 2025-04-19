@@ -7,6 +7,31 @@
   <link rel="stylesheet" href="login.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .password-container {
+      position: relative;
+    }
+
+    .password-container input {
+      width: 100%;
+      padding-right: 40px; /* space for eye icon */
+    }
+
+    .toggle-eye {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .toggle-eye:hover {
+      color: #000;
+    }
+  </style>
 </head>
 <body class="login-body">
 
@@ -17,7 +42,12 @@
           <h2 class="login-title">Welcome Back, Warrior</h2>
           <form class="login-form" onsubmit="return checkCredentials(event)">
             <input type="email" id="email" placeholder="Email" required />
-            <input type="password" id="password" placeholder="Password" required />
+
+            <div class="password-container">
+              <input type="password" id="password" placeholder="Password" required />
+              <i class="fas fa-eye toggle-eye" id="togglePassword" onclick="togglePassword()"></i>
+            </div>
+
             <button type="submit" class="btn">Login</button>
             <p class="login-note">Don’t have an account? <a href="#">Sign up</a></p>
             <p id="error-msg" class="error-msg"></p>
@@ -26,6 +56,7 @@
       </div>
     </section>
   </div>
+
   <script>
     function checkCredentials(event) {
       event.preventDefault();
@@ -36,10 +67,25 @@
       const validPassword = "rage123";
 
       if (email === validEmail && password === validPassword) {
-        window.location.href = "home.html";
+        window.location.href = "http://127.0.0.1:5500/home.html";
         alert("Login successful! Welcome to Rage Fitness.");
       } else {
         document.getElementById("error-msg").textContent = "Invalid email or password.";
+      }
+    }
+
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleIcon = document.getElementById("togglePassword");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
       }
     }
   </script>
