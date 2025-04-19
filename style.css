@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0d0d0d;
+  color: #e5e5e5;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  border-bottom: 2px solid #ff0000;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-container img.logo {
+  width: 60px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.logo-text span {
+  color: #ff0000;
+}
+
+/* Navigation */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links li a {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute;
+  top: 28px;
+  right: 80px;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3) contrast(1.1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: #ff0000;
+  text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #ccc;
+}
+
+.btn {
+  background: #ff0000;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 35px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px #ff0000aa;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #000;
+  color: #ff0000;
+  box-shadow: 0 0 25px #ff0000ee;
+}
+
+/* View More Button */
+.view-more-btn {
+  background: #ff0000;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 35px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px #ff0000aa;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background: #000;
+  color: #ff0000;
+  box-shadow: 0 0 25px #ff0000ee;
+}
+
+/* Sections */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #ff0000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #bbb;
+}
+
+.dark-bg {
+  background-color: #111;
+}
+
+/* Services */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.service-box {
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+  padding: 40px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  border: 1px solid #ff000022;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #000;
+  flex: 1 1 calc(33% - 20px);
+}
+
+.service-box i {
+  font-size: 36px;
+  color: #ff0000;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff000044;
+  border-color: #ff0000;
+}
+
+/* Media Query for Mobile and Tablet Sizes */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column; /* Stack the nav and logo in column layout */
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+    justify-content: flex-start; /* Align logo to the left on mobile */
+    width: 100%;
+  }
+
+  .logo-container img.logo {
+    width: 45px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+
+  /* Horizontal nav links under the logo */
+  .nav-links {
+    flex-direction: row; /* Keep links horizontal */
+    align-items: center;
+    justify-content: center; /* Center the links */
+    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 0 10px; /* Adjust space between links */
+  }
+
+  /* Smaller nav links on mobile */
+  .nav-links li a {
+    font-size: 14px;
+    text-transform: none; /* Remove uppercase text */
+  }
+
+  /* Adjust logout button on mobile */
+  .logout-btn {
+    position: absolute;
+    top: 28px;
+    right: 20px; /* Move the button to the right on mobile */
+    font-size: 8px;
+    padding: 6px 12px;
+  }
+
+  .view-more-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 30px; /* Adjust border-radius for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links li a {
+    font-size: 8px; /* Even smaller font size for small screens */
+  }
+
+  .nav-links li {
+    margin: 0 8px; /* Reduce the space between links further for small screens */
+  }
+
+  .hero-content h2 {
+    font-size: 60px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .view-more-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 25px; /* Adjust border-radius for even smaller screens */
+  }
+}
+
+/* Media Query for Services Grid */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* Footer Media Query */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 0;
+    font-size: 14px;
+  }
+}

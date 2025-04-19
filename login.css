@@ -1,0 +1,200 @@
+/* Fonts & Base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically and horizontally */
+  text-align: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Login Section */
+.login-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically and horizontally */
+  height: 100%; /* Full height for centering */
+}
+
+.login-content {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Card Style Login Box */
+.login-box {
+  background-color: #1f1f1f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid #2e2e2e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%; /* Ensure it doesn't exceed screen width */
+  width: 100%; /* Let the box take full width of container */
+  box-sizing: border-box;
+}
+
+.login-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.2);
+}
+
+.login-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background: #cc0000;
+}
+
+.login-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
+
+.login-note a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .login-box {
+      padding: 30px;
+  }
+
+  .login-title {
+      font-size: 30px;
+  }
+
+  .login-form input {
+      font-size: 14px;
+      padding: 16px;
+  }
+
+  .btn {
+      font-size: 16px;
+      padding: 12px;
+  }
+
+  .login-note {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-box {
+      padding: 25px;
+  }
+
+  .login-title {
+      font-size: 28px;
+  }
+
+  .login-form input {
+      font-size: 14px;
+      padding: 15px;
+  }
+
+  .btn {
+      font-size: 16px;
+      padding: 12px;
+  }
+
+  .login-note {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      height: auto; /* Allow body to grow on small screens */
+  }
+
+  .login-box {
+      padding: 20px;
+      margin-top: 130px; /* Move it down */
+  }
+
+  .login-title {
+      font-size: 24px;
+  }
+
+  .login-form input {
+      font-size: 14px;
+      padding: 14px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .login-note {
+      font-size: 12px;
+  }
+
+  .login-hero {
+      padding: 20px; /* Ensure some space around the login form on mobile */
+      height: auto; /* Ensure the height is auto on small screens for centering */
+  }
+}

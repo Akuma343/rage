@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="ragelogo.png" type="image/x-icon">
+
+  <title>Rage Fitness Gym - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <div class="logo-container">
+        <img src="ragelogo.png" alt="Rage Fitness Gym" class="logo">
+        <h1 class="logo-text">Rage <span>Fitness</span></h1>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#promos">Promos</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="http://127.0.0.1:5500/index.html" class="logout-btn" onclick="return confirmLogout()">Logout</a>
+ 
+  </header>
+
+  <section id="home" class="hero">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="gymvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h2>DARE TO BE DIFFERENT</h2>
+      <p>24 Hours Gym Access | Circuit Class | Boxing Fitness Class</p>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p>At <strong>Rage Fitness Gym</strong>, we provide top-tier facilities for all fitness enthusiasts. Our 24/7 gym in Tagum City offers a variety of classes and programs designed to help you achieve your goals.</p>
+      <a href="about.html" class="read-more-btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section id="services" class="section dark-bg">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-box" id="strength-training">
+          <strong>Strength Training</strong>
+        </div>
+        <div class="service-box" id="cardio-programs">
+          <strong>Cardio Programs</strong>
+        </div>
+        <div class="service-box" id="personal-coaching">
+          <strong>Personal Coaching</strong>
+        </div>
+        <div class="service-box" id="group-classes">
+          <strong>Group Classes</strong>
+        </div>
+        <div class="service-box" id="boxing-class">
+          <strong>Boxing Class</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>"Rage Fitness Gym helped me reach my goals in record time. The trainers are amazing!"</p>
+          <strong>- John Doe</strong>
+        </div>
+        <div class="testimonial">
+          <p>"The 24/7 access and variety of programs make it so convenient to fit workouts into my schedule."</p>
+          <strong>- Jane Smith</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promos -->
+  <section id="promos" class="section dark-bg">
+    <div class="container">
+      <h2 class="section-title">Current Promos</h2>
+      <p>🔥 <strong>Graveyard Rate:</strong> Enjoy discounted access from <strong>12 Midnight to 6AM</strong>.</p>
+    </div>
+    <a class="View-more-btn">viewMore</a>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p>📍 Tagum City <br> 📞 0912-345-6789 <br> 📧 ragefitness@example.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Rage Fitness Gym. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function confirmLogout() {
+      return confirm("Are you sure you want to logout?");
+    }
+  </script>
+</body>
+</html>
