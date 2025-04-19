@@ -320,12 +320,12 @@ header {
   }
 
   .nav-links li {
-    margin: 0 6px !important; /* Adjust space between links */
+    margin: 0 6px !important; 
   }
 
-  /* Smaller nav links on mobile */
+  
   .nav-links li a {
-    font-size: 8px !important; /* Force the font size to be 15px */
+    font-size: 8px !important; 
     text-transform: none !important; /* Ensure no uppercase text */
   }
 
