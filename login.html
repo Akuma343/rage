@@ -11,11 +11,22 @@
   <style>
     .password-container {
       position: relative;
+      margin-bottom: 15px;
     }
 
     .password-container input {
       width: 100%;
-      padding-right: 40px; /* space for eye icon */
+      padding: 12px 15px;
+      padding-right: 40px; /* space for the eye icon */
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+
+    .password-container input:focus {
+      border-color: #4CAF50;
+      outline: none;
     }
 
     .toggle-eye {
@@ -24,12 +35,22 @@
       right: 12px;
       transform: translateY(-50%);
       cursor: pointer;
-      color: #555;
-      font-size: 18px;
+      font-size: 20px;
+      color: #777;
+      transition: color 0.3s ease;
     }
 
     .toggle-eye:hover {
-      color: #000;
+      color: #333; /* darker shade when hovered */
+    }
+
+    .toggle-eye:active {
+      color: #4CAF50; /* active color when clicked */
+    }
+
+    /* Optional: Add focus styles */
+    .password-container input:focus + .toggle-eye {
+      color: #4CAF50;
     }
   </style>
 </head>
@@ -89,5 +110,6 @@
       }
     }
   </script>
+
 </body>
 </html>
