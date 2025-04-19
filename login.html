@@ -293,8 +293,8 @@
       const validPassword = "rage123";
 
       if (email === validEmail && password === validPassword) {
-        window.location.href = "home.html";
         alert("Login successful! Welcome to Rage Fitness.");
+        window.location.href = "home.html";
       } else {
         document.getElementById("error-msg").textContent = "Invalid email or password.";
       }
