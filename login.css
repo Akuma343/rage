@@ -190,10 +190,10 @@ body {
     font-size: 12px;
   }
 
-  /* Smaller toggle eye icon on mobile */
+  
   .toggle-eye {
-    font-size: 16px; /* Smaller size on smaller screens */
-    right: 40px; /* Adjust position */
+    font-size: 16px; 
+    right: 40px; 
   }
 }
 
@@ -230,9 +230,9 @@ body {
     height: auto;
   }
 
-  /* Even smaller toggle eye icon on very small screens */
+  
   .toggle-eye {
-    font-size: 14px; /* Further smaller size for very small screens */
-    right: 25px; /* Adjust position for smaller screens */
+    font-size: 14px; 
+    right: 25px; 
   }
 }
